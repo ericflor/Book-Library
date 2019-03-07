@@ -40,19 +40,19 @@
 
       <div id="navbar" class="navbar-menu">
         <div class="navbar-start">
-          <%# if subscribed? %>
+          <% if subscribed? %>
             <div class="navbar-item">
-              <%#= link_to library_index_path, class: 'navbar-item button is-dark' do %>
+              <%= link_to library_index_path, class: 'navbar-item button is-dark' do %>
                 <i class="fa fa-book"></i> &nbsp;&nbsp; My Library
-              <%# end %>
+              <% end %>
             </div>
-          <%# end %>
+          <% end %>
         </div>
         <div class="navbar-end">
           <div class="navbar-item">
-            <%# if admin? %>
-              <%#= link_to 'New Book', new_book_path, class:'button is-dark' %>
-            <%# end %>
+            <% if admin? %>
+              <%= link_to 'New Book', new_book_path, class:'button is-dark' %>
+            <% end %>
             <div class="field is-grouped">
             <% if user_signed_in? %>
 
@@ -67,7 +67,7 @@
               </div>
             <% else %>
             <p class="control">
-              <%#= link_to 'Pricing', pricing_index_path, class: 'navbar-item button is-dark' %>
+              <%= link_to 'Pricing', pricing_index_path, class: 'navbar-item button is-dark' %>
             </p>
             <p class="control">
               <%= link_to "Sign In", new_user_session_path, class:"navbar-item button is-dark" %>
